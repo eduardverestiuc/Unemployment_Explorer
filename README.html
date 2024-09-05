@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UnX - Autentificare</title>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>UnX - Unemployment Explorer</h1>
+      </header>
+      <h2>Cuprins</h2>
+      <ul>
+        <li>
+          <a href="#authors">Autori</a>
+        </li>
+        <li>
+          <a href="#introduction">1. Introducere</a>
+          <ul>
+            <li><a href="#introduction-purpose">1.1 Scop</a></li>
+            <li><a href="#conventions">1.2 Convenție de scriere</a></li>
+            <li><a href="#audience">1.3 Publicul țintă</a></li>
+            <li><a href="#product-scope">1.4 Scopul produsului</a></li>
+            <li><a href="#references">1.5 Referințe</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#overall">2. Descriere Generală</a>
+          <ul>
+            <li>
+              <a href="#product-perspective">2.1 Perspectiva produsului</a>
+            </li>
+            <li><a href="#product-functions">2.2 Funcțiile produsului</a></li>
+            <li>
+              <a href="#users"
+                >2.3 Clase și caracteristici ale utilizatorilor</a
+              >
+            </li>
+            <li><a href="#operating-environment">2.4 Mediul de operare</a></li>
+            <li>
+              <a href="#documentation">2.5 Documentația pentru utilizator</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#external">3. Interfețele aplicației </a>
+          <ul>
+            <li>
+              <a href="#user-interface">3.1 Interfața utilizatorului </a>
+              <ul>
+                <li><a href="#nav-bar">3.1.1 Bara de navigație </a></li>
+                <li>
+                  <a href="#login-page">3.1.2 Pagina de autentificare </a>
+                </li>
+                <li>
+                  <a href="#signup-page">3.1.3 Pagina de înregistrare </a>
+                </li>
+                <li>
+                  <a href="#sendMail-page"
+                    >3.1.4 Pagina de actualizare a datelor</a
+                  >
+                </li>
+                <li><a href="#home-page">3.1.5 Pagina de acasă </a></li>
+                <li><a href="#about">3.1.6 Pagina informativa </a></li>
+                <li><a href="#help">3.1.7 Pagina de ajutor </a></li>
+                <li>
+                  <a href="#profile"
+                    >3.1.8 Pagina verificare codului pentru inregistrare
+                  </a>
+                </li>
+                <li><a href="#admin">3.1.9 Pagina administratorului </a></li>
+                <li>
+                  <a href="#changepass">3.1.10 Pagina de generat statistici </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#hardware-interface">3.2 Interfața Hardware </a></li>
+            <li><a href="#software-interface">3.3 Interfața Software</a></li>
+            <li>
+              <a href="#communication-interface">3.4 Interfața de comunicare</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#system-features">4. Caracteristici ale sistemului</a>
+          <ul>
+            <li>
+              <a href="#management">4.1 Gestionarea contului </a>
+              <ul>
+                <li>
+                  <a href="#management-1">4.1.1 Descriere și generalități </a>
+                </li>
+                <li>
+                  <a href="#management-2">4.1.2 Actualizarea informațiilor</a>
+                </li>
+                <li>
+                  <a href="#management-3">4.1.3 Condiții de funcționare</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#utilizatori">4.2 Secțiunea Utilizatori</a>
+              <ul>
+                <li>
+                  <a href="#utilizatori-1">4.2.1 Descriere și generalități</a>
+                </li>
+                <li>
+                  <a href="#utilizatori-2">4.2.2 Actualizarea informațiilor</a>
+                </li>
+                <li>
+                  <a href="#utilizatori-3">4.2.3 Condiții de funcționare</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#logout">4.3 Secțiunea Logout</a>
+              <ul>
+                <li><a href="#logout-1">4.3.1 Descriere și generalități</a></li>
+                <li>
+                  <a href="#logout-2">4.3.2 Actualizarea informațiilor</a>
+                </li>
+                <li><a href="#logout-3">4.3.3 Condiții de funcționare</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#non-functional"
+            >5.Funcționalități pentru protecție și securitate</a
+          >
+          <ul>
+            <li><a href="#safety">5.1 Protecția datelor</a></li>
+            <li><a href="#security">5.2 Securizarea datelor</a></li>
+            <li><a href="#software-attributes">5.3 Calitățile Software </a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#c4-diagrame">6.Diagramele C4</a>
+          <ul>
+            <li><a href="#c4-1">6.1 Nivelul 1 - Context</a></li>
+            <li><a href="#c4-2">6.2 Nivelul 2 - Containere</a></li>
+            <li>
+              <a href="#c4-3">6.3 Nivelul 3 - Componente</a>
+            </li>
+            <li><a href="#c4-4">6.4 Nivelul 4 - Cod</a></li>
+          </ul>
+        </li>
+        <li>
+            <a href="#videoclip">7. Videoclip demonstartiv</a>
+          </li>
+      </ul>
+      <div role="contentinfo">
+        <section id="authors" typeof="sa:AuthorsList">
+          <h2>Autori</h2>
+          <ul>
+            <li property="schema:author" typeof="sa:ContributorRole">
+              <span typeof="schema:Person">
+                <meta content="Paul" property="schema:givenName" />
+                <meta content="Eusebiu" property="schema:additionalName" />
+                <meta content="Bejan" property="schema:familyName" />
+                <span property="schema:name">Bejan Paul Eusebiu</span>
+              </span>
+              <ul>
+                <li
+                  property="schema:roleContactPoint"
+                  typeof="schema:ContactPoint"
+                >
+                  <a
+                    href="mailto:pauleusebiubejan@yahoo.com"
+                    property="schema:email"
+                    >pauleusebiubejan@yahoo.com</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li property="schema:author" typeof="sa:ContributorRole">
+              <span typeof="schema:Person">
+                <meta content="Eduard" property="schema:givenName" />
+                <meta content="Gabriel" property="schema:additionalName" />
+                <meta content="Vereștiuc" property="schema:familyName" />
+                <span property="schema:name">Vereștiuc Eduard Gabriel</span>
+              </span>
+              <ul>
+                <li
+                  property="schema:roleContactPoint"
+                  typeof="schema:ContactPoint"
+                >
+                  <a
+                    href="mailto:eduard.verestiuc18@gmail.com"
+                    property="schema:email"
+                    >eduard.verestiuc18@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <section id="introduction">
+        <h3>1. Introducere</h3>
+        <section id="introduction-purpose">
+          <h4>1.1 Scop</h4>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;UnX - Unemployment Explorer este o aplicație
+            web dezvoltată de studenții menționați în secțiunea de Autori de la
+            Facultatea de Informatică a Universității Alexandru Ioan Cuza din
+            Iași. Scopul acestui document este acela de a prezenta o descriere
+            detaliată a funcționalităților, precum și de a specifica cerințele
+            aplicației web. Această aplicație va oferi utilizatorilor
+            posibilitatea de a vizualiza date statistice privind șomajul din
+            România, dar și de a compara aceste date pe diferite criterii, cum
+            ar fi rata șomajului pe județe, pe sexe, pe grupe de vârstă sau pe
+            nivel de educație.
+          </p>
+        </section>
+        <section id="conventions">
+          <h4>1.2 Convenția documentului</h4>
+          <ul>
+            <li>
+              Acest document urmează șablonul de documentație a cerințelor
+              software conform IEEE Software Requirements Specification.
+            </li>
+            <li>
+              Textul <b>îngroșat</b> este folosit pentru a defini noțiuni
+              personalizate sau pentru a accentua concepte importante.
+            </li>
+          </ul>
+        </section>
+        <section id="audience">
+          <h4>1.3 Publicul țintă</h4>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Acest document este destinat profesorilor,
+            studenților, dezvoltatorilor publicului interesat, însă orice
+            utilizator, indiferent de cunoștințele lor tehnologice, poate
+            consulta secțiunile de <b>Interfeța utilizatorului</b> și
+            <b>Caracteristici ale sistemului</b>
+            pentru a obține o mai bună înțelegere a ceea ce oferă aplicația.
+          </p>
+        </section>
+        <section id="product-scope">
+          <h4>1.4 Scopul Produsului</h4>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Scopul produsului "Unemployment Explorer"
+            este de a oferi utilizatorilor un instrument puternic și ușor de
+            folosit pentru explorarea, vizualizarea și compararea datelor
+            referitoare la șomajul din România pe ultimele 12 luni. Acesta are
+            câteva obiective principale: analiza și înțelegerea datelor de șomaj
+            din România, compararea multi-criterială, generarea de vizualizări
+            informative, exportul de date (utilizatorii pot exporta datele și
+            vizualizările în formatele CSV, SVG și PDF, pentru a le utiliza în
+            analize ulterioare, raportări sau prezentări), suport pentru luarea
+            deciziilor (produsul poate servi ca instrument de sprijin pentru
+            manageri și alte părți interesate în luarea deciziilor legate de
+            politici de angajare, planificare economică și alte aspecte legate
+            de ocuparea forței de muncă).
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Prin îmbunătățirea accesibilității și
+            înțelegerii datelor de șomaj și prin furnizarea de instrumente
+            puternice de analiză și vizualizare, "Unemployment Explorer"
+            contribuie la creșterea transparenței și a cunoștințelor în domeniul
+            pieței muncii din România și poate facilita dezvoltarea de politici
+            și strategii mai eficiente în acest domeniu.
+          </p>
+        </section>
+        <section id="references">
+          <h4>1.5 Bibliografie</h4>
+          <ul>
+            <li>Site-ul cursului de la Tehnologii Web, FII UAIC Iași</li>
+            <li>
+              IEEE Template: https://github.com/rick4470/IEEE-SRS-Tempate#readme
+            </li>
+            <li>
+              Format scholarly-html: https://w3c.github.io/scholarly-html/
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section id="overall">
+        <h3>2. Descriere Generală</h3>
+        <section id="product-perspective">
+          <h4>2.1 Perspectiva produsului</h4>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;"Unemployment Explorer" este un instrument
+            esențial pentru explorarea și analiza datelor de șomaj din România.
+            Oferind vizualizări interactive, comparare multi-criterială și
+            export de date, acesta susține luarea deciziilor informate în
+            politicile de ocupare a forței de muncă și promovează dezvoltarea
+            economică și socială. Cu un potențial adaptabil și extensibil,
+            produsul are capacitatea de a răspunde nevoilor diverse ale
+            utilizatorilor și de a contribui la o înțelegere mai profundă a
+            dinamicii pieței muncii.
+          </p>
+        </section>
+
+        <section id="product-functions">
+          <h4>2.2 Funcționalitățile produsului</h4>
+          Fiecare utilizator va avea acces la urmatoarele funcționălități:
+          <ul>
+            <li>să se înregistreze pe site</li>
+            <li>să se autentifice pe site</li>
+            <li>
+              să își reseteze parola in cazul in care a uitat-o si sa isi
+              actualizeze datele personale
+            </li>
+            <li>să acceseze paginile "Autentificare", "Despre", "Ajutor"</li>
+            <li>
+              să acceseze pagina "Autentificare" pentru a se loga sau a se
+              înregistra pe pagina web
+            </li>
+            <li>
+              să acceseze pagina "Despre" pentru a accesa scurtă descriere a
+              paginii web
+            </li>
+            <li>
+              să acceseze pagina "Ajutor" pentru a beneficia de sfaturi în
+              vederea utilizării aplicației
+            </li>
+            <li>
+              dacă este <b>autentificat</b>, să acceseze date referitoare la
+              șomajul din România
+            </li>
+            <li>
+              dacă este <b>autentificat</b>, să exporte date referitoare la
+              șomajul din România
+            </li>
+            <li>
+              dacă utilizatorul are rol de <b>admin</b>, acesta poate șterge
+              utilizatori,tabele si feedback-uri din baza de date si se poate
+              importa fisiere CSV in baza de date
+            </li>
+          </ul>
+        </section>
+        <section id="users">
+          <h4>2.3 Clase și caracteristici ale utilizatorilor</h4>
+          <h5>2.3.1 Utilizator principal</h5>
+          <ul>
+            <li>utilizatorii autentificați pot fi:</li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  orice categorie de oameni care doresc să vizualizeze datele de
+                  șomaj din România și să exporte datele în formatele CSV, SVG
+                  și PDF
+                </li>
+              </ul>
+            </li>
+            <li>
+              utilizatorii neautentificați pot fi:
+              <ul>
+                <li>orice categorie de oameni care doresc isi faca cont</li>
+              </ul>
+            </li>
+          </ul>
+          <h5>2.3.2 Caracteristici</h5>
+          <ul>
+            <li>
+              Utilizatorii care sunt <b> autentificați </b> pot să vizualizeze
+              datele de șomaj din România, să exporte datele în formatele CSV,
+              SVG și PDF, să își acceseze profilul și să își modifice datele
+              personale.
+            </li>
+            <li>
+              Utilizatorii care sunt <b> neautentificați </b> pot doar să sa își
+              creeze un cont pe site.
+            </li>
+          </ul>
+        </section>
+        <section id="operating-environment">
+          <h4>2.4 Mediul de operare</h4>
+          <p>
+            Produsul dezvoltat poate fi utilizat pe orice dispozitiv cu un
+            browser web care suportă HTML5, CSS și PHP.
+          </p>
+        </section>
+        <section id="documentation">
+          <h4>2.5 Documentația pentru utilizator</h4>
+          <p>
+            Utilizatorii pot consulta acest document pentru explicații detaliate
+            despre funcționalitățile aplicației web.
+          </p>
+        </section>
+      </section>
+      <section id="external">
+        <h3>3. Interfețele aplicației</h3>
+        <section id="user-interface">
+          <h4>3.1 Interfața utilizatorului</h4>
+          Mai jos, puteți vedea o prezentare generală a fiecărei pagini a
+          aplicației și funcționalităților pe care le oferă:
+          <ul>
+            <li id="nav-bar"><b>Bara de navigație</b></li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Aceasta reprezintă meniul de navigare către fiecare pagina a
+                  aplicației, prezent pe fiecare pagină totodată.
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="login"
+                    src="./Imagini/bara-navigare.JPG"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li id="login-page"><b>Pagina de autentificare</b></li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Pagina are rolul de a realiza autentificarea utilizatorilor la
+                  UnX - Unemployment Explorer.
+                </li>
+                <li>
+                  Pentru a se autentifica, utilizatorul trebuie să completeze
+                  câmpurile de "username" și "password" cu credențiale
+                  <b>valide</b>, urmând să acționeze butonul
+                  <b>Autentificare</b>.
+                </li>
+                <li>
+                  În cazul în care utilizatorul nu are cont pe site, acesta își
+                  poate crea unul prin accesarea pagini de sign-up, ce se face
+                  prin apăsarea butonului <b>Sign-up</b>.
+                </li>
+                <li>
+                  În cazul în care utilizatorul și-a uitat parola, acesta poate
+                  să o reseteze selectând opțiunea de
+                  <b> Ai uitat parola? </b>
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="login"
+                    height="400"
+                    src="./Imagini/log-in-read-me.JPG"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li id="signup-page"><b>Pagina de Sign-up</b></li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Pagina are rolul de a realiza inregistrarea utilizatorilor la
+                  UnX - Unemployment Explorer.
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="login"
+                    height="400"
+                    src="./Imagini/sign-up-read-me.JPG"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li id="sendMail-page">
+              <b>Pagina de actualizare a datelor</b>
+            </li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Pagina are rolul de a permite utilizatorilor inregistrati la
+                  UnX - Unemployment Explorer sa isi modifice datele de
+                  autentificare.
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="login"
+                    height="400"
+                    src="./Imagini/actualizare-date-read-me.JPG"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li id="home-page"><b> Pagina de acasă</b></li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Din această pagină poți accesa toate funcționalitățile
+                  aplicației web.
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/pagina-acasa-1.JPG"
+                    width="800"
+                  />
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/pagina-acasa-2.JPG"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li id="about"><b>Pagina informativa - Despre</b></li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Pagina are rolul de a introduce site-ul UnX - Unemployment
+                  Explorer pe scurt, prin menționarea unor mici detalii:
+                  tehnologii utilizate, numele autorilor, scopul aplicației și
+                  bibliografia.
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/despre_main.PNG"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+
+            <li id="help"><b>Pagina de ajutor - Help</b></li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Pagina are rolul de a prezenta câteva sfaturi pentru a putea
+                  beneficia de o experienta completa pe site.
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/help-html.PNG"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+
+            <li id="profile">
+              <b>Pagina verificare codului pentru inregistrare</b>
+            </li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Pagina are rolul de a verificare autenticitatea emailului
+                  introdus la inregistrare.
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/verify-html.jpg"
+                    width="800"
+                  />
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/email-html.jpg"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li id="admin"><b>Pagina Administratorului</b></li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Pagina are rolul de a permite utilizatorilor cu rol de admin
+                  sa gestioneze utilizatorii, sa stearga utilizatori, tabele si
+                  feedback-uri (plus sa le vizualizeze) din baza de date si sa
+                  se importe fisiere CSV in baza de date.
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/admin-html.jpg"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li id="changepass">
+              <b>Pagina de generat statistici</b>
+            </li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Pagina are rolul de a permite utilizatorilor cu rol de user sa
+                  genereze statistici pe baza datelor din baza de date in trei
+                  tipuri de vizualizare diferite si sa le exporte in trei
+                  formate diferite.
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/statistici-html.jpg"
+                    width="800"
+                  />
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/statistici-html2.jpg"
+                    width="800"
+                  />
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/statistici-html3.jpg"
+                    width="800"
+                  />
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/statistici-html4.jpg"
+                    width="800"
+                  />
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/statistici-html5.png"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li id="admin"><b>Pagina Swagger</b></li>
+            <li style="list-style: none">
+              <ul>
+                <li>
+                  Aplicația este documentata cu Swagger si ofera posibilitatea de a
+                    testa API-urile si de vedea structura lor.
+                </li>
+                <li class="pictures" style="list-style: none">
+                  <img
+                    alt="overview"
+                    src="./Imagini/swagger-html.jpg"
+                    width="800"
+                  />
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <section id="hardware-interface">
+            <h4>3.2 Interfața Hardware</h4>
+            <p>
+              Acest produs nu necesită interfețe hardware, funcționând pe orice
+              platformă (calculatoare, laptopuri, telefoane etc.), care are
+              instalată un browser.
+            </p>
+          </section>
+          <section id="software-interface">
+            <h4>3.3 Interfața Software</h4>
+            <p>
+              Cerințele minime de software includ un browser funcțional,
+              compatibil cu HTML5,PHP si JS.
+            </p>
+
+            <h5>MySql</h5>
+            Aceasta reprezintă baza de date în care stocăm informații despre
+            utilizatori.
+          </section>
+          <section id="communication-interface">
+            <h4>3.4 Interfața de comunicare</h4>
+            <p>
+              Aplicația necesită o conexiune la internet. Standardul de
+              comunicare care va fi utilizat este HTTP.
+            </p>
+          </section>
+          <section id="system-features">
+            <h3>4. Caracteristici ale sistemului</h3>
+            <section id="management">
+              <h4>4.1 Gestionarea contului</h4>
+              <h5 id="management-1">4.1.1 Descriere și generalități</h5>
+              Un utilizator se poate înregistra alegându-și un nume de
+              utilizator, un email, o parola si numar de telefon. Acesta se
+              poate autentifica având nevoie doar de numele de utilizator și de
+              parolă.
+              <h5 id="management-2">4.1.2 Actualizarea informațiilor</h5>
+              <ul>
+                <li>
+                  În momentul în care un utilizator nou este creat,
+                  credențialele acestuia sunt introduse în baza de date. De
+                  asemenea, când utilizatorul decide să-și modifice
+                  credențialele, noile valori sunt și ele actualizate în baza de
+                  date.
+                </li>
+              </ul>
+              <h5 id="management-3">4.1.3 Condiții de funcționare</h5>
+              <ul>
+                <li>
+                  Pentru a-și modifica credențialele utilizatorul, nu trebuie să
+                  fie autentificat.
+                </li>
+                <li>
+                  Pentru a se autentifica, utilizatorul are nevoie de un cont
+                  care este înregistrat în baza de date.
+                </li>
+              </ul>
+            </section>
+            <section id="utilizatori">
+              <h4>4.2 Secțiunea de utilizatori</h4>
+              <h5 id="utilizatori-1">4.2.1 Descriere și generalități</h5>
+              Secțiunea <b>Utilizatori</b> este destinată <b>adminului</b>, și
+              aceasta îi oferă posibilitatea de a vizualiza o listă cu toți
+              utilizatorii, feedback-urile si tabelele din baza de date. De
+              asemenea, acesta are posibilitatea de a elimina utilizatori din
+              baza de date, dacă dorește acest lucru, și de a importa fisiere
+              CSV in baza de date, de a sterge tabele si feedback-uri
+              vizualizate deja.
+              <h5 id="utilizatori-2">4.2.2 Actualizarea informațiilor</h5>
+              <ul>
+                <li>
+                  La apăsarea butonului de ștergere din dreptul fiecărui
+                  utilizator/tabele/feedback a carui nume/nume/id este selectat,
+                  informatiile utilizatorului/tabelei/feedback-ului care a fost
+                  selectat, sunt șterse din baza de date.
+                </li>
+              </ul>
+              <h5 id="utilizatori-3">4.2.3 Condiții de funcționare</h5>
+              <ul>
+                <li>Utilizatorul trebuie să fie autentificat.</li>
+                <li>Utilizatorul trebuie să dețină drepturi de admin.</li>
+              </ul>
+            </section>
+            <section id="logout">
+              <h4>4.3 Secțiunea de Logout</h4>
+              <h5 id="logout-1">4.3.1 Descriere și generalități</h5>
+              Secțiunea de <b>Logout</b> are rolul de a deconecta utilizatorul
+              de pe cont și îl redirecționează către pagina de sign in.
+              <h5 id="logout-2">4.3.2 Actualizare informațiilor</h5>
+              <ul>
+                <li>Tokenul jwt de autentificare este eliminat.</li>
+              </ul>
+              <h5 id="logout-3">4.3.3 Condiții de funcționare</h5>
+              <ul>
+                <li>Utilizatorul trebuie să fie autentificat.</li>
+              </ul>
+            </section>
+          </section>
+          <section id="non-functional">
+            <h3>5. Funcționalități pentru protecție și securitate</h3>
+            <section id="safety">
+              <h4>5.1 Protecția datelor</h4>
+              <p>
+                Aplicația va asigura confidențialitatea datelor prin intermediul
+                unei criptări a parolelor utilizatorilor înainte de a fi stocate
+                în baza de date. De asemenea, accesul la datele utilizatorilor
+                va fi restricționat, astfel încât acestea să nu poată fi
+                vizualizate sau modificate de către persoane neautorizate. Toate
+                cererile importante vor trebuie autorizate prin token-uri JWT.
+              </p>
+            </section>
+            <section id="security">
+              <h4>5.2 Securizarea datelor</h4>
+              <p>
+                Parola utilizatorilor va fi criptată înainte de a fi stocată
+                prin intermediul unui algoritm de hashing. De asemenea, accesul
+                la datele utilizatorilor va fi restricționat, astfel încât
+                acestea să nu poată fi vizualizate sau modificate de către
+                persoane neautorizate. Toate cererile importante vor trebui
+                autorizate prin token-uri JWT.
+              </p>
+            </section>
+            <section id="software-attributes">
+              <h4>5.3 Calitățile Software</h4>
+              <ul>
+                <li>Adaptabilitate</li>
+                <li>Ușurință în utilizare</li>
+                <li>Flexibilitate</li>
+              </ul>
+            </section>
+          </section>
+        </section>
+        <section id="c4-diagrame">
+            <h3>6.Diagramele C4</h3>
+            <section id="c4-1">
+              <h4>6.1 Nivelul 1 - Context</h4>
+              <li class="pictures" style="list-style: none">
+                <img
+                  alt="overview"
+                  src="./Imagini/C4 - Nivel 1.png"
+                  width="800"
+                />
+              </li>
+            </section>
+            <section id="c4-2">
+              <h4>6.2 Nivelul 2 - Containere</h4>
+              <li class="pictures" style="list-style: none">
+                <img
+                  alt="overview"
+                  src="./Imagini/C4 - Nivel 2.png"
+                  width="800"
+                />
+              </li>
+            </section>
+            <section id="c4-3">
+              <h4>6.3 Nivelul 3 - Componente</h4>
+              <li class="pictures" style="list-style: none">
+                <img
+                  alt="overview"
+                  src="./Imagini/C4 - Nivel3.png"
+                  width="800"
+                />
+              </li>
+            </section>
+            <section id="c4-4">
+                <h4>6.4 Nivelul 4 - Cod</h4>
+                <li class="pictures" style="list-style: none">
+                    <img
+                      alt="overview"
+                      src="./Imagini/C4 - Nivel4.png"
+                      width="800"
+                    />
+                  </li>
+              </section>
+          </section>
+          <section id="videoclip">
+            <h3>7. Videoclip demonstrativ</h3>
+            <video width="800" height="400" controls>
+              <source src="./Imagini/videoclip-demonstrativ.mp4" type="video/mp4">
+              Browserul tău nu suportă elementul video.
+            </video>
+            <br>
+            <li>
+              <a href="./Imagini/videoclip-demonstrativ.mp4">Vezi videoclipul in caz ca nu se incarca direct</a>
+            </li>
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/pMXhDf2-gwU" title="Videoclip demonstrativ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </section>
+        </section>
+      </section>
+    </article>
+  </body>
+</html>

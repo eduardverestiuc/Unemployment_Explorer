@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnX - Autentificare</title>
+    <link
+      rel="icon"
+      href="/PROIECT_TEHNOLOGII_WEB/Imagini/logo-mic.JPG"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/PROIECT_TEHNOLOGII_WEB/FisiereCSS/style-login.css"
+    />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <header>
+      <div class="bara-navigare">
+        <a href="./index.html" class="nume-aplicatie">
+          UnX - Unemployment Explorer
+        </a>
+        <img
+          src="/PROIECT_TEHNOLOGII_WEB/Imagini/Logo-index.png"
+          alt="Logo"
+          class="imagine-logo"
+        />
+        <a href="./login.html" class="buton-login">Autentificare</a>
+        <a href="./despre.html" class="buton-despre">Despre</a>
+        <a href="./ajutor.html" class="buton-ajutor">Ajutor</a>
+      </div>
+    </header>
+
+    <div class="container-login">
+      <div class="login-box">
+        <h2>Sign In</h2>
+        <form action="#lol">
+          <label for="name">Username</label>
+          <div class="usernamepassword-box">
+            <input
+              type="text"
+              placeholder="Username"
+              name="username"
+              id="name"
+              required
+            />
+          </div>
+          <label for="parola">Password</label>
+          <div class="usernamepassword-box">
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              id="parola"
+              required
+            />
+          </div>
+          <div class="buton-signin">
+            <button type="submit" onclick="rezolva(event)">Sign In</button>
+          </div>
+        </form>
+        <div class="actualizeaza-datele">
+          <a href="/PROIECT_TEHNOLOGII_WEB/FisiereHTML/actualizare-date.html"
+            >Ti-ai uitat parola sau vrei sa modifici datele?</a
+          >
+        </div>
+      </div>
+
+      <div class="sign-up-box">
+        <h2>Conecteaza-te pentru a continua</h2>
+        <p>Nu ai cont? Inregistreaza-te aici!</p>
+        <a href="./signup.html"> Sign Up</a>
+      </div>
+    </div>
+
+    <script src="/PROIECT_TEHNOLOGII_WEB/FisiereJS/login.js"></script>
+  </body>
+</html>

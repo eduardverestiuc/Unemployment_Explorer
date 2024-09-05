@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnX - Inregistrare</title>
+    <link
+      rel="icon"
+      href="/PROIECT_TEHNOLOGII_WEB/Imagini/logo-mic.JPG"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/PROIECT_TEHNOLOGII_WEB/FisiereCSS/style-signup.css"
+    />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body>
+    <div id="overlay"></div>
+    <header>
+      <div class="bara-navigare">
+        <a href="./index.html" class="nume-aplicatie">
+          UnX - Unemployment Explorer
+        </a>
+        <img
+          src="/PROIECT_TEHNOLOGII_WEB/Imagini/Logo-index.png"
+          alt="Logo"
+          class="imagine-logo"
+        />
+        <a href="./login.html" class="buton-login">Autentificare</a>
+        <a href="./despre.html" class="buton-despre">Despre</a>
+        <a href="./ajutor.html" class="buton-ajutor">Ajutor</a>
+      </div>
+    </header>
+
+    <div class="container-signup">
+      <div class="signup-box">
+        <h2>Sign Up</h2>
+        <form id="registerForm" method="post">
+          <label for="username">Username</label>
+          <div class="usernamepassword-box">
+            <input
+              type="text"
+              placeholder="Username"
+              id="username"
+              name="username"
+              pattern="[A-Za-z0-9]+"
+              required
+            />
+          </div>
+          <label for="password">Password</label>
+          <div class="usernamepassword-box">
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+          <label for="phone">Phone Number</label>
+          <div class="usernamepassword-box">
+            <input
+              type="tel"
+              placeholder="Phone"
+              id="phone"
+              name="phone"
+              pattern="\d*"
+              required
+            />
+          </div>
+          <label for="email">Email</label>
+          <div class="usernamepassword-box">
+            <input
+              type="email"
+              placeholder="Email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="buton-signup">
+            <button type="submit">Sign Up</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="signup-already">
+        <h2>Multumim ca te inregistrezi</h2>
+        <p>Ai deja un cont? Da-ti Sign In acum!</p>
+        <a href="./login.html"> Sign In</a>
+      </div>
+    </div>
+    <script src="/PROIECT_TEHNOLOGII_WEB/FisiereJS/signup.js"></script>
+  </body>
+</html>

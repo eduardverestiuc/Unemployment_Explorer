@@ -1,0 +1,354 @@
+@font-face {
+    font-family:  Brush Script MT;
+    src: url(/PROIECT_TEHNOLOGII_WEB/BRUSHSCI.TTF);
+}
+
+body {
+    display: none;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.nume-aplicatie{
+    align-self: center;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    width: 20%;
+    margin-right: auto;
+}
+
+.imagine-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 18%;
+    margin-left: auto;
+}
+
+.bara-navigare{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58px;
+  z-index: 1;
+}
+
+.buton-login{
+    /*margin-right: 20px;*/
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    width: 10%;
+}
+
+.buton-login:hover {
+    background-color: #ddd;
+    height: 58px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buton-despre{
+    /*margin-right: 20px;*/
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    width: 8%;
+}
+
+.buton-despre:hover {
+    background-color: #ddd;
+    height: 58px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.buton-ajutor{
+    /*margin-right: 20px;*/
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    width: 7%;
+}
+
+.buton-ajutor:hover {
+    background-color: #ddd;
+    height: 58px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.imagine-zoom-container{ 
+    display: flex;
+    width: 100%;
+    height: 85vh;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 40px solid #ddd;
+    background-image: url("/PROIECT_TEHNOLOGII_WEB/Imagini/somaj.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    animation: zoomInOut 30s infinite alternate;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.titlu-bine-venit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(169, 169, 169, 0.9);
+    font-size: 50px;
+    text-align: right;
+    position: absolute;
+    top: 10%;
+    width: 40%;
+    right: 0%;
+    font-family: "Brush Script MT", cursive; 
+    font-style: oblique;
+    z-index: 2;
+}
+
+.linie-valuri{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 40%;
+    height: 6px; 
+    background: linear-gradient(to right, darkgrey 20%, #696969 40%, darkgrey 60%, #696969 80%, darkgrey 100%);
+    background-size: 200% auto;
+    border-radius: 5px;
+    animation: linie-valuri 3s linear infinite;
+    top: 27%;
+    right: 0%;
+}
+
+.imagine-judete-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+}
+
+.imagine-judete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    background-color: #ddd;
+    height: 600px;
+    opacity: 0.7;
+    box-shadow: 0 0 20px rgba(0, 0, 0);
+}
+
+.moto-aplicatie{
+    width: 30%;
+    height: 600px;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 40px;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    left: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0);
+}
+
+
+.administratori{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes linie-valuri {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+
+
+@media screen and (min-width: 481px) and (max-width: 1200px){
+    .bara-navigare{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nume-aplicatie
+    {
+        width: 20%;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 13px;
+    }
+
+    .imagine-logo {
+        width: 28%;
+        margin-right: auto;
+        margin-left: auto;
+        height: auto;
+    }
+
+    .buton-login,
+    .buton-despre,
+    .buton-ajutor {
+        padding: 0px 20px;
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 13px;
+    }
+    
+    .imagine-zoom-container{
+        height: 415px;
+        border-bottom: 30px solid #ddd;
+    } 
+
+    .titlu-bine-venit {
+        width: 43%;
+        top: 12%;
+        right: 0%;
+        font-size: 27px;
+    }
+
+    .linie-valuri {
+        top: 25%;
+        right: 0;
+        width: 43%;
+        height: 4px; 
+    }
+
+    .imagine-judete-container{
+        margin-top: auto;
+    }
+    .imagine-judete{
+        height: 500px;
+    }
+    .moto-aplicatie{
+        width: 30%;
+        height: 500px;
+        font-size: 26px;
+    }
+    .administratori{
+      text-align: center;
+      font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .bara-navigare{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nume-aplicatie
+    {
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .imagine-logo {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .buton-ajutor:hover,
+    .buton-despre:hover,
+    .buton-login:hover {
+        height: auto;
+    }
+
+    .buton-login,
+    .buton-despre,
+    .buton-ajutor {
+        padding: 0px 20px;
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .imagine-zoom-container{
+        height: 392px;
+        border-bottom: 20px solid #ddd;
+    }
+
+    .titlu-bine-venit {
+        width: 50%;
+        top: 86%;
+        right: 25%;
+        font-size: 20px;
+    }
+
+    .linie-valuri {
+        top: 97%;
+        right: 25%;
+        width: 50%;
+        height: 3px; 
+    }
+
+    .imagine-judete-container{
+        margin-top: auto;
+    }
+    .imagine-judete{
+        height: 392px;
+    }
+    .moto-aplicatie{
+        width: 30%;
+        height: 392px;
+        font-size: 15px;
+    }
+    .administratori{
+      text-align: center;
+      font-size: 8px;
+    }
+}
+

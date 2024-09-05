@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnX - Uneployment explorer</title>
+    <link
+      rel="icon"
+      href="/PROIECT_TEHNOLOGII_WEB/Imagini/logo-mic.JPG"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/PROIECT_TEHNOLOGII_WEB/FisiereCSS/style-statistici.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <header>
+      <div class="bara-navigare">
+        <a href="./index.html" class="nume-aplicatie">
+          UnX - Unemployment Explorer
+        </a>
+        <img
+          src="/PROIECT_TEHNOLOGII_WEB/Imagini/Logo-index.png"
+          alt="Logo"
+          class="imagine-logo"
+        />
+        <button class="buton-logout" type="button" onclick="logout()">
+          Delogare
+        </button>
+      </div>
+    </header>
+    <h2 class="titlu">Statistici Șomaj România &#128202;</h2>
+    <div class="container">
+      <details>
+        <summary>Legendă</summary>
+        <table class="tabelLegenda">
+          <tr>
+            <th colspan="3">
+              Alegeți cu atenție formatul în care doriți să vizualizați și să
+              exportați statistici!<br />În funcție de format, se acceptă
+              următoarele posibilități:
+            </th>
+          </tr>
+          <tr>
+            <td>Format CSV:</td>
+            <td>Format PDF:</td>
+            <td>Format SVG:</td>
+          </tr>
+          <tr>
+            <td>Statistici multi-criteriale, valori exacte</td>
+            <td>Grafice bazate pe statistici, valori aproximative</td>
+            <td>Statistici interactive bazate pe un singur criteriu</td>
+          </tr>
+          <tr>
+            <td>Limită: 4 județe 4 criterii 4 luni</td>
+            <td>Limită: 4 județe 3 criterii 4 luni</td>
+            <td>Limită: 4 județe 1 criteriu 1 luna</td>
+          </tr>
+        </table>
+      </details>
+    </div>
+
+    <h3 id="titluSelect" class="titlu_mic"><span>Selectați formatul:</span></h3>
+    <select id="selectOptiuni" class="optiune">
+      <option value="optiune1">CSV</option>
+      <option value="optiune2">PDF</option>
+      <option value="optiune3">SVG</option>
+    </select>
+
+    <button id="saveButton" class="optiune">Confirm / Restart</button>
+    <div class="container2">
+      <div class="box"></div>
+      <div class="box" id="outputBox"></div>
+    </div>
+    <script src="/PROIECT_TEHNOLOGII_WEB/FisiereJS/statistici.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnX - Admin</title>
+    <link
+      rel="icon"
+      href="/PROIECT_TEHNOLOGII_WEB/Imagini/logo-mic.JPG"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/PROIECT_TEHNOLOGII_WEB/FisiereCSS/style-admin.css"
+    />
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <header>
+      <div class="bara-navigare">
+        <a href="./index.html" class="nume-aplicatie">
+          UnX - Unemployment Explorer
+        </a>
+        <img
+          src="/PROIECT_TEHNOLOGII_WEB/Imagini/Logo-index.png"
+          alt="Logo"
+          class="imagine-logo"
+        />
+        <button class="buton-logout" type="button" onclick="logout()">
+          Delogare
+        </button>
+      </div>
+    </header>
+    <div class="tabela-stergere">
+      <label for="tables">Tabela care doriți să o ștergeți:</label>
+      <input list="table-list" id="tables" name="tables" />
+      <datalist id="table-list"> </datalist>
+      <button type="button" onclick="deleteTable()">Șterge</button>
+    </div>
+
+    <div class="user-stergere">
+      <label for="users">Userul care doriți să îl ștergeți:</label>
+      <input list="user-list" id="users" name="users" />
+      <datalist id="user-list"> </datalist>
+      <button type="button" onclick="deleteUser()">Șterge</button>
+    </div>
+
+    <div class="buton-afisare">
+      <button type="button" onclick="showForm()">
+        CREARE SAU UPDATE TABELĂ
+      </button>
+    </div>
+
+    <div class="tabela-creare" id="table-form" style="display: none">
+      <div class="input-group">
+        <label for="new-table-name">Numele noii tabele:</label>
+        <input type="text" id="new-table-name" name="new-table-name" required />
+      </div>
+      <div class="input-group">
+        <label for="csv-file">Încărcați un fișier CSV:</label>
+        <input
+          type="file"
+          id="csv-file"
+          name="csv-file"
+          accept=".csv"
+          required
+        />
+      </div>
+      <button type="button" onclick="createTable()">Crează tabel</button>
+    </div>
+
+    <div class="buton-afisare">
+      <button type="button" onclick="showFeedbackuri()">
+        AFIȘEAZĂ FEEDBACK-URI
+      </button>
+    </div>
+
+    <div class="vizualizare-feedback" id="feedback-form" style="display: none">
+      <h2>Feedback-uri</h2>
+      <ul id="feedback-list"></ul>
+      <div>
+        <label for="feedbacks"
+          >Feedback-ul pe care doriți să îl ștergeți:</label
+        >
+        <input list="feedback-id-list" id="feedbacks" name="feedbacks" />
+        <datalist id="feedback-id-list"></datalist>
+        <button type="button" onclick="deleteFeedback()">Șterge</button>
+      </div>
+    </div>
+
+    <script src="/PROIECT_TEHNOLOGII_WEB/FisiereJS/admin.js"></script>
+  </body>
+</html>

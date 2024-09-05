@@ -1,0 +1,334 @@
+@font-face {
+    font-family:  Brush Script MT;
+    src: url(/PROIECT_TEHNOLOGII_WEB/BRUSHSCI.TTF);
+}
+
+body {
+    display: none;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    top: 5%;
+    background-color: #457aac;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/PROIECT_TEHNOLOGII_WEB/Imagini/sign-up.jpg);
+}
+
+.bara-navigare{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    z-index: 1;
+}
+
+.nume-aplicatie{
+    align-self: center;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    width: 20%;
+    margin-right: auto;
+}
+
+.imagine-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 18%;
+    margin-left: auto;
+}
+
+.buton-login{
+    /*margin-right: 20px;*/
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    width: 10%;
+}
+
+.buton-login:hover {
+    background-color: #ddd;
+    height: 58px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buton-despre{
+    /*margin-right: 20px;*/
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    width: 8%;
+}
+
+.buton-despre:hover {
+    background-color: #ddd;
+    height: 58px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.buton-ajutor{
+    /*margin-right: 20px;*/
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    width: 7%;
+}
+
+.buton-ajutor:hover {
+    background-color: #ddd;
+    height: 58px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-signup{
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0%;
+    height: 450px;
+    width: 55%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.signup-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(240, 240, 240, 0.7));
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.signup-box h2{
+    margin-left:10%;
+    align-items: center;
+    margin-top: 8%;
+    margin-bottom: 0%;
+    width: 100%;
+    font-size: 24px;
+    font-family: 'Pacifico', cursive;
+}
+
+.signup-box form{
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.signup-box form label{
+    font-size: 18px;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 0%;
+
+}
+
+.usernamepassword-box{
+    width: 50%;
+    margin-bottom: 5%;
+}
+
+.usernamepassword-box input::placeholder {
+    color: white;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.usernamepassword-box input{
+    font-size: 16px;
+    background: linear-gradient(to bottom, #b3e0ff 0%, #005580 100%);
+    font-family: 'Pacifico', cursive;
+    border-radius: 50px;
+    border: 1px solid black;
+    width: 100%;
+    color: white;
+}
+
+.buton-signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width:80%;
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #b3e0ff 0%, #005580 100%);
+    border: 1px solid black;
+}
+
+.buton-signup button{
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.buton-signup button:hover {
+    transition: background-color 1s;
+    background-color: rgba(255, 255, 255, 0.804);
+    border-radius: 50px;
+    width: 100%;
+    color: #000;
+}
+
+.signup-already{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(179, 224, 255, 0.7) 0%, rgba(0, 85, 128, 0.7) 100%);
+}
+
+.signup-already h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 0%;
+    font-weight: bold;
+    width: 100%;
+    font-size: 24px;
+    font-family: 'Pacifico', cursive;
+}
+
+.signup-already p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-style: italic;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Pacifico', cursive;
+}
+
+.signup-already a{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+.signup-already a:hover{
+    background-color: white;
+    color: #000;
+}
+
+@media screen and (min-width: 481px) and (max-width: 1200px){
+    .bara-navigare{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nume-aplicatie
+    {
+        width: 20%;
+        margin-right: 0;
+        margin-left: 0;
+        font-size: 13px;
+    }
+
+    .imagine-logo {
+        width: 28%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .buton-login,
+    .buton-despre,
+    .buton-ajutor {
+        padding: 0px 20px;
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 13px;
+    }
+
+    .container-signup{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .bara-navigare{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nume-aplicatie
+    {
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .imagine-logo {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .buton-ajutor:hover,
+    .buton-despre:hover,
+    .buton-login:hover {
+        height: auto;
+    }
+
+    .buton-login,
+    .buton-despre,
+    .buton-ajutor {
+        padding: 0px 20px;
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container-signup{
+        width: 70%;
+        height: 350px;
+        margin-top: 130px;
+    }
+
+    .signup-already h2{
+        font-size: 18px;
+    }
+
+    .signup-already p{
+        font-size: 12px;
+    }
+}

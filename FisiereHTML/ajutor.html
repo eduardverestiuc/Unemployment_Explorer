@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnX - Uneployment explorer</title>
+    <link
+      rel="icon"
+      href="/PROIECT_TEHNOLOGII_WEB/Imagini/logo-mic.JPG"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/PROIECT_TEHNOLOGII_WEB/FisiereCSS/style-ajutor.css"
+    />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <header>
+      <div class="bara-navigare">
+        <a href="./index.html" class="nume-aplicatie">
+          UnX - Unemployment Explorer
+        </a>
+        <img
+          src="/PROIECT_TEHNOLOGII_WEB/Imagini/Logo-index.png"
+          alt="Logo"
+          class="imagine-logo"
+        />
+        <a href="./login.html" class="buton-login">Autentificare</a>
+        <a href="./despre.html" class="buton-despre">Despre</a>
+        <a href="./ajutor.html" class="buton-ajutor">Ajutor</a>
+      </div>
+    </header>
+    <div class="ajutor-container">
+      <h2>&#128269; Suport &#128270;</h2>
+      <div class="ajutor-box">
+        Întrebări frecvente:
+        <ol>
+          <li>
+            <div class="intrebare">
+              Cum pot accesa datele privind șomajul din România utilizând
+              aplicația web?
+            </div>
+            <div class="raspuns">
+              Pentru a accesa datele privind șomajul din România, navigați către
+              secțiunea "Date despre șomaj". Aici veți găsi opțiuni pentru a
+              explora și analiza datele disponibile.
+            </div>
+          </li>
+          <li>
+            <div class="intrebare">
+              Care sunt criteriile disponibile pentru vizualizarea și compararea
+              datelor despre șomaj?
+            </div>
+            <div class="raspuns">
+              Criteriile disponibile pentru vizualizarea și compararea datelor
+              despre șomaj includ județul, nivelul de educație, grupa de vârstă,
+              mediul de rezidență și intervalul de timp.
+            </div>
+          </li>
+          <li>
+            <div class="intrebare">
+              În ce format se pot exporta statisticele si rapoartele generate?
+            </div>
+            <div class="raspuns">
+              Formatele permise exportului sunt: PDF, SVG și CSV.
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="casuta-mesaj">
+        <div class="mesaj-box">Feedback:</div>
+        <form>
+          <p class="mesaj-paragraf">Mesaj</p>
+          <div class="casuta-input">
+            <textarea
+              placeholder="Scrie mesajul aici"
+              name="mesaj"
+              id="mesaj"
+              required
+              maxlength="255"
+            ></textarea>
+            <div id="charCount">0/255 caractere</div>
+          </div>
+          <p class="mesaj-paragraf">Email</p>
+          <div class="casuta-input">
+            <input
+              type="email"
+              placeholder="Adresa ta de email"
+              name="email"
+              id="email"
+              required
+            />
+          </div>
+          <div class="buton-trimitere">
+            <button type="submit">Trimite</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/PROIECT_TEHNOLOGII_WEB/FisiereJS/ajutor.js"></script>
+  </body>
+</html>

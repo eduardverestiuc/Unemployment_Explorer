@@ -1,0 +1,350 @@
+@font-face {
+    font-family:  Brush Script MT;
+    src: url(/PROIECT_TEHNOLOGII_WEB/BRUSHSCI.TTF);
+}
+
+body {
+    display: none;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    top: 5%;
+    background-color: #ee82ee;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -15%;
+    background-image: url(/PROIECT_TEHNOLOGII_WEB/Imagini/proba_3.png);
+}
+
+.bara-navigare{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    z-index: 1;
+}
+
+.nume-aplicatie{
+    align-self: center;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    width: 20%;
+    margin-right: auto;
+}
+
+.imagine-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 18%;
+    margin-left: auto;
+}
+
+.buton-login{
+    /*margin-right: 20px;*/
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    width: 10%;
+}
+
+.buton-login:hover {
+    background-color: #ddd;
+    height: 58px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buton-despre{
+    /*margin-right: 20px;*/
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    width: 8%;
+}
+
+.buton-despre:hover {
+    background-color: #ddd;
+    height: 58px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.buton-ajutor{
+    /*margin-right: 20px;*/
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    width: 7%;
+}
+
+.buton-ajutor:hover {
+    background-color: #ddd;
+    height: 58px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ajutor-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0%;
+    height: 10vh;
+    width: 100%;
+    margin-top: 4%;
+}
+
+.ajutor-container h2{
+    text-align: center;
+    width: 90%;
+    font-size: 12vh;
+    font-family: 'Brush Script MT', cursive;
+    margin: auto;
+    background-color: rgba(148, 0, 211, 0.5);
+    border-radius: 20px;
+}
+
+
+.ajutor-box{
+    text-align: left;
+    background-color: rgba(148, 0, 211, 0.5);
+    width: 50%;
+    height: 50%;
+    font-size: 6vh;
+    font-family: 'Pacifico', cursive;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 8%;
+    margin-left: 2%;
+}
+
+.ajutor-box li{
+    text-align: left;
+    justify-content: center;
+    width: auto;
+    height: 50%;
+    font-size: 3vh;
+    font-family: 'Pacifico', cursive;
+    padding-left: 5%;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+
+.intrebare{
+    background-color: rgba(148, 0, 211, 0.5);
+    border-radius: 10px;
+}
+
+.intrebare:hover {
+    background-color: #ddd;
+    height: 50%;
+    color: #000;
+}
+
+.raspuns{
+    margin-top: 5%;
+    background-color: rgba(243, 243, 6, 0.7);
+    border-radius: 10px;
+}
+
+.raspuns:hover {
+    background-color: #ddd;
+    height: 50%;
+    color: #000;
+}
+
+.casuta-mesaj {
+    width: 30%;
+    height: auto;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.mesaj-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(148, 0, 211, 0.5);
+    width: 70%;
+    height: auto;
+    font-size: 6vh;
+    font-family: 'Pacifico', cursive;
+    border-radius: 10px;
+}
+
+#charCount {
+    font-size: 2vh;
+    font-family: 'Pacifico', cursive;
+    color: black;
+}
+
+.mesaj-paragraf {
+    font-size: 3vh;
+    font-family: 'Pacifico', cursive;
+    border-radius: 10px;
+    width: 50%;
+    background-color: rgba(243, 243, 6, 0.7);
+}
+
+.casuta-input {
+    margin-bottom: 20px;
+}
+
+.casuta-input textarea,
+.casuta-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buton-trimitere {
+    text-align: center;
+}
+
+.buton-trimitere button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buton-trimitere button:hover {
+    background-color: #45a049;
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 1200px){
+    .bara-navigare{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nume-aplicatie
+    {
+        width: 20%;
+        margin-right: 0;
+        margin-left: 0;
+        font-size: 13px;
+    }
+
+    .imagine-logo {
+        width: 28%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .buton-login,
+    .buton-despre,
+    .buton-ajutor {
+        padding: 0px 20px;
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 13px;
+    }
+
+    .mesaj-box {
+        width: auto;
+        font-size: 4vh;
+    }
+    
+    .ajutor-box{
+        font-size: 3.5vh;
+    }
+
+    .ajutor-container h2{
+        font-size: 6vh;
+        margin-top: 4%;
+    }
+
+
+
+}
+
+@media screen and (max-width: 480px){
+    .bara-navigare{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nume-aplicatie
+    {
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .imagine-logo {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .buton-ajutor:hover,
+    .buton-despre:hover,
+    .buton-login:hover {
+        height: auto;
+    }
+
+    .buton-login,
+    .buton-despre,
+    .buton-ajutor {
+        padding: 0px 20px;
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .ajutor-container{
+        margin-top: 80%;
+
+}
+
+   .ajutor-container h2{
+    margin-top: -40%;
+    font-size: 3vh;
+   }
+
+   .ajutor-box{
+    font-size: 3vh;
+    width: auto;
+   }
+
+   .casuta-mesaj{
+    margin-top: 330%;
+    margin-left: 35%;
+    padding-bottom: 80%;
+   }
+
+   .mesaj-box{
+    font-size: 3vh;
+    width: auto;
+   }
+
+   .mesaj-paragraf{
+    width: auto;
+   }
+
+   
+}

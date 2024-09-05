@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificare Cod</title>
+    <link
+      rel="icon"
+      href="/PROIECT_TEHNOLOGII_WEB/Imagini/logo-mic.JPG"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/PROIECT_TEHNOLOGII_WEB/FisiereCSS/style-verify.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <header>
+      <div class="bara-navigare">
+        <span class="nume-aplicatie"> UnX - Unemployment Explorer </span>
+        <img
+          src="/PROIECT_TEHNOLOGII_WEB/Imagini/Logo-index.png"
+          alt="Logo"
+          class="imagine-logo"
+        />
+      </div>
+    </header>
+
+    <div class="verificare-cod">
+      <h2>Verificare Cod</h2>
+      <form id="verify-form">
+        <div class="input-container">
+          <input
+            type="text"
+            id="code"
+            name="code"
+            placeholder="Introduceti codul de verificare"
+          />
+        </div>
+        <h4>
+          ~Pentru a anula procesul de inregistrare, apasati butonul Anuleaza~
+        </h4>
+        <div class="buton-container">
+          <button type="submit" class="buton-stilizat">Trimite</button>
+        </div>
+        <div class="buton-container">
+          <button
+            class="buton-stilizat"
+            type="button"
+            onclick="window.location.href='/PROIECT_TEHNOLOGII_WEB/FisierePHP/cancel_session_verify.php'"
+          >
+            Anuleaza
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="/PROIECT_TEHNOLOGII_WEB/FisiereJS/verify.js"></script>
+  </body>
+</html>

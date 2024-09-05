@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actualizare date</title>
+    <link
+      rel="icon"
+      href="/PROIECT_TEHNOLOGII_WEB/Imagini/logo-mic.JPG"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/PROIECT_TEHNOLOGII_WEB/FisiereCSS/style-actualizare-date.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <header>
+      <div class="bara-navigare">
+        <span class="nume-aplicatie"> UnX - Unemployment Explorer </span>
+        <img
+          src="/PROIECT_TEHNOLOGII_WEB/Imagini/Logo-index.png"
+          alt="Logo"
+          class="imagine-logo"
+        />
+      </div>
+    </header>
+
+    <div class="actualizare-date">
+      <h2>Actualizare Date</h2>
+      <form id="verify-form">
+        <div class="input-container">
+          <input
+            type="text"
+            id="code"
+            name="code"
+            placeholder="Introduceti email-ul dumneavoastra"
+          />
+          <button type="submit" class="buton-stilizat">Trimite</button>
+          <button
+            class="buton-stilizat"
+            type="button"
+            onclick="window.location.href='/PROIECT_TEHNOLOGII_WEB/FisierePHP/cancel_session_verify.php'"
+          >
+            Anuleaza
+          </button>
+        </div>
+      </form>
+      <form id="update-form" style="display: none">
+        <div class="input-container">
+          <input
+            class="input-style"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Introduceti noul email"
+          />
+          <input
+            class="input-style"
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Introduceti noul username"
+          />
+        </div>
+        <div class="input-container">
+          <input
+            class="input-style"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Introduceti noul password"
+          />
+          <input
+            class="input-style"
+            type="text"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="Introduceti noul phone number"
+          />
+        </div>
+        <div class="input-container">
+          <input
+            class="input-style"
+            type="text"
+            id="codVerificare"
+            name="codVerificare"
+            placeholder="Introduceti codul de confirmare"
+          />
+        </div>
+        <div class="buton-cod">
+          <button type="submit" class="buton-cod2">Actualizeaza</button>
+        </div>
+        <h4>
+          Daca este introdus un email necorespunzator schimbarea datelor pe
+          viitor va fi imposibila. Mesaj prin feedback.
+        </h4>
+      </form>
+
+      <h4>
+        ~Pentru a anula procesul de Actualizare, apasati butonul Anuleaza~
+      </h4>
+    </div>
+    <script src="/PROIECT_TEHNOLOGII_WEB/FisiereJS/actualizare-date.js"></script>
+  </body>
+</html>
